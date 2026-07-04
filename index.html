@@ -27,10 +27,26 @@
         <main>
             <section id="summarySection" class="dashboard-section">
                 <h2>Resumo</h2>
-                <article class="kpi-card" data-kpi="income"></article>
-                <article class="kpi-card" data-kpi="expense"></article>
-                <article class="kpi-card" data-kpi="balance"></article>
-                <article class="kpi-card" data-kpi="total-transactions"></article>
+                <article class="kpi-card" data-kpi="income">
+                    <p class="kpi-label">Total de Receitas</p>
+                    <p class="kpi-value">€ 0,00</p>
+                </article>
+
+                <article class="kpi-card" data-kpi="expense">
+                    <p class="kpi-label">Total de Despesas</p>
+                    <p class="kpi-value">€ 0,00</p>
+                </article>
+
+                <article class="kpi-card" data-kpi="balance">
+                    <p class="kpi-label">Saldo Actual</p>
+                    <p class="kpi-value">€ 0,00</p>
+                </article>
+
+                <article class="kpi-card" data-kpi="total-transactions">
+                    <p class="kpi-label">Número de Vendas</p>
+                    <p class="kpi-value">€ 0,00</p>
+                </article>
+
                 </section>
     
             <section id="chartsSection" class="dashboard-section">
@@ -41,6 +57,8 @@
     
             <section id="transactionsSection" class="dashboard-section">
                 <h2>Transações</h2>
+                <input type="search" id="searchInput" class="search-input" placeholder="Pesquisar por descrição ou categoria..." aria-label="Pesquisar transações">
+
                 <table>
                     <thead>
                         <tr>
@@ -55,6 +73,7 @@
                         <!-- linhas de transações vão entrar aqui via JS -->
                     </tbody>
                 </table>
+                
             </section>
     
         </main>
