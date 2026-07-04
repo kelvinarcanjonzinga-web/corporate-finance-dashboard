@@ -15,41 +15,49 @@
                 <li><a href="#">Definições</a></li>
             </ul>
         </nav>
+
     </aside>
 
-    <main>
-        <section>
-            <h2>Resumo</h2>
-            <article class="kpi-card" data-kpi="income"></article>
-            <article class="kpi-card" data-kpi="expense"></article>
-            <article class="kpi-card" data-kpi="balance"></article>
-            <article class="kpi-card" data-kpi="total-transactions"></article>
+    <div class="main-wrapper">
+        <header>
+            <h1>Visão Geral</h1>
+            <button>+ Nova Transação</button>
+        </header>
+        <main>
+            <section>
+                <h2>Resumo</h2>
+                <article class="kpi-card" data-kpi="income"></article>
+                <article class="kpi-card" data-kpi="expense"></article>
+                <article class="kpi-card" data-kpi="balance"></article>
+                <article class="kpi-card" data-kpi="total-transactions"></article>
+                </section>
+    
+            <section>
+                <h2>Gráficos</h2>
+                <div id="financialChartContainer"></div>
+                <div id="expenseChartContainer"></div>
             </section>
+    
+            <section>
+                <h2>Transações</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col">Descrição</th>
+                            <th scope="col">Categoria</th>
+                            <th scope="col">Data</th>
+                            <th scope="col">Tipo</th>
+                            <th scope="col">Valor</th>
+                        </tr>
+                    </thead>
+                    <tbody id="transactionList">
+                        <!-- linhas de transações vão entrar aqui via JS -->
+                    </tbody>
+                </table>
+            </section>
+    
+        </main>
+    </div>
 
-        <section>
-            <h2>Gráficos</h2>
-            <div id="financialChartContainer"></div>
-            <div id="expenseChartContainer"></div>
-        </section>
-
-        <section>
-            <h2>Transações</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th scope="col">Descrição</th>
-                        <th scope="col">Categoria</th>
-                        <th scope="col">Data</th>
-                        <th scope="col">Tipo</th>
-                        <th scope="col">Valor</th>
-                    </tr>
-                </thead>
-                <tbody id="transactionList">
-                    <!-- linhas de transações vão entrar aqui via JS -->
-                </tbody>
-            </table>
-        </section>
-
-    </main>
 </body>
 </html>
