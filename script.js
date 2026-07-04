@@ -116,3 +116,42 @@ function renderizarTabela(){
 
     })
 }
+
+//Calcular Total das Receitas;
+
+function calcularTotalReceitas() {
+    const receitas = transacoes.filter(t => t.type === 'income')
+
+    const totalReceitas = receitas.reduce((acumulator , t)=>{
+        return acumulator + t.amount
+    }, 0)
+
+    return totalReceitas
+}
+
+//Calcular Total das Despesas;
+
+function calcularTotalDespesas(){
+    const despesas = transacoes.filter(t => t.type === 'expense')
+
+    const totalDespesas = despesas.reduce((acumulator , t)=>{
+        return acumulator + t.amount
+    }, 0)
+
+    return totalDespesas
+}
+
+//Calcular Saldo;
+
+function calcularSaldo(){
+    const saldoDisponivel = calcularTotalReceitas() - calcularTotalDespesas()
+
+    return saldoDisponivel
+}
+
+//Calcular quantidades de vendas;
+
+function calcularNumeroVendas(){
+    const vendas = transacoes.filter(t => t.type === 'income')
+    return vendas.length
+}
