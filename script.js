@@ -260,12 +260,35 @@ function criarGraficoSaldo(){
             labels: labels,
             datasets: [{
                 label: 'Saldo (€)',
-                data: valores
+                data: valores,
+                  borderColor: '#2F6F5E',
+                backgroundColor: 'rgba(47,111,94,0.1)',
+                fill: true,
+                tension: 0.3,
+                pointRadius: 4,
+                pointBackgroundColor: '#2F6F5E'
             }]
+        },
+
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                y:{
+                    grid: {
+                        color: '#E5E7EB'
+                    }
+                },
+
+                x: {
+                    grid: {
+                        display: false
+                    }
+                }
+            }
         }
     })
 }
-
 
 //Calcula despesas por categoria;
 
@@ -312,5 +335,18 @@ function criarGraficoCategoria(){
         }
     })
 }
+
+//Evento nas Definições;
+
+const definicoes = document.getElementById('definicoes')
+
+definicoes.addEventListener('click' , ()=>{
+    console.log(definicoes)
+    alert('Impossível aceder as Definições da Dashboard!')
+})
+
+//Twemoji;
+
+twemoji.parse(document.body)
 
 
