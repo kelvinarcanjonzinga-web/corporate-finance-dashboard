@@ -158,6 +158,39 @@ function calcularNumeroVendas(){
     return vendas.length
 }
 
+//Calcular saldo Acumulado;
+
+function calcularSaldoAcumulado(){
+    const transacoesOrdenadas = [...transacoes].sort((a , b)=>{
+        if(a.date < b.date) return -1
+        if(a.date > b.date) return 1
+        return 0
+    })
+
+    let saldoCorrente = 0
+
+    const historico = transacoesOrdenadas.reduce((acumulador , t)=>{
+
+        //Atualiza o saldo corrente, somando ou subtraindo consoante o tipo;
+
+        if(t.type === 'income'){
+            saldoCorrente += t.amount
+
+        } else {
+            saldoCorrente -= t.amount
+        }
+
+        // Adiciona um novo "ponto" ao array acumulado, com a data e o saldo naquele momento;
+
+        acumulador.push({date: t.date , saldo: saldoCorrente})
+
+        return acumulador
+    }, [])
+
+    return historico
+}
+
+
 //Actualização dos KPIs;
 
 function actualizarKPIs(){
@@ -239,4 +272,6 @@ campoPesquisa.addEventListener('input', (event) => {
     })
     renderizarTabela(resultadoFiltrado);
 })
+
+//Integração com Chart.js;
 

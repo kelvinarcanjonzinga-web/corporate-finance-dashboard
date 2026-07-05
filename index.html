@@ -51,8 +51,14 @@
     
             <section id="chartsSection" class="dashboard-section">
                 <h2>Gráficos</h2>
-                <div id="financialChartContainer"></div>
-                <div id="expenseChartContainer"></div>
+
+                <div id="financialChartContainer">
+                    <canvas id="balanceChart"></canvas>
+                </div>
+
+                <div id="expenseChartContainer">
+                    <canvas id="categoryChart"></canvas>
+                </div>
             </section>
     
             <section id="transactionsSection" class="dashboard-section">
@@ -73,7 +79,7 @@
                         <!-- linhas de transações vão entrar aqui via JS -->
                     </tbody>
                 </table>
-                
+
             </section>
     
         </main>
@@ -122,6 +128,7 @@
         </form>
     </dialog>
 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
     <script src="script.js"></script>
 
 </body>
