@@ -1,5 +1,19 @@
 @charset "UTF-8";
 
+:root {
+    --color-bg: #F6F7F9;
+    --color-surface: #FFFFFF;
+    --color-sidebar: #14213D;
+    --color-accent: #2F6F5E;
+    --color-warning: #B8813A;
+    --color-danger: #A6402F;
+    --color-text: #171B26;
+    --color-text-muted: #6B7280;
+
+    --font-display: 'Plus Jakarta Sans', sans-serif;
+    --font-body: 'Inter', sans-serif;
+}
+
 *{
     margin: 0;
     padding: 0;

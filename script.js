@@ -1,3 +1,5 @@
+//Elevação dessas variáveis para evitar Hosting;
+
 let graficoSaldo;
 let graficoCategoria;
 
