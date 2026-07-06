@@ -336,14 +336,54 @@ function criarGraficoCategoria(){
     })
 }
 
+//ScrollIntoView;
+
+//Visão Geral;
+
+document.getElementById('visaogeral').addEventListener('click' , (event)=>{
+    event.preventDefault()
+
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+})
+
+//Relatório;
+
+const relatorios = document.getElementById('relatorios')
+
+relatorios.addEventListener('click' , (event)=>{
+    event.preventDefault()
+
+    const local = document.getElementById('summarySection')
+    local.scrollIntoView({behavior: 'smooth'})
+})
+
+//Transações;
+
+const transactions = document.getElementById('transacoes')
+
+transactions.addEventListener('click' , (event)=>{
+    event.preventDefault()
+
+    document.getElementById('transactionsSection').scrollIntoView({behavior: 'smooth'})
+})
+
 //Evento nas Definições;
 
 const definicoes = document.getElementById('definicoes')
 
 definicoes.addEventListener('click' , ()=>{
-    console.log(definicoes)
-    alert('Impossível aceder as Definições da Dashboard!')
+    alert('Esta secção está em construção — para uma próxima versão do dashboard! 🚧')
 })
+
+//Fechar o Dialog;
+
+const fecharDialog = document.getElementById('fecharDialog')
+
+fecharDialog.addEventListener('click' , ()=>{
+    document.getElementById('transactionModal').close()
+})
+
+
 
 //Twemoji;
 

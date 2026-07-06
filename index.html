@@ -13,9 +13,9 @@
     <aside>
         <nav>
             <ul>
-                <li><a href="#" class="is-active"> 📊 Visão Geral</a></li>
-                <li><a href="#"> 💳 Transações</a></li>
-                <li><a href="#"> 📄 Relatórios</a></li>
+                <li><a href="#" class="is-active" id="visaogeral"> 📊 Visão Geral</a></li>
+                <li><a href="#" id="transacoes"> 💳 Transações</a></li>
+                <li><a href="#" id="relatorios"> 📄 Relatórios</a></li>
                 <li><a href="#" id="definicoes"> ⚙️ Definições</a></li>
             </ul>
         </nav>
@@ -89,6 +89,7 @@
     </div>
 
     <dialog id="transactionModal">
+        <button id="fecharDialog">✖️</button>
         <form method="dialog" id="transactionForm">
             <h2>Nova Transação</h2>
 
