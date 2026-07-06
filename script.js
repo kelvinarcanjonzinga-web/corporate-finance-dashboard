@@ -383,6 +383,21 @@ fecharDialog.addEventListener('click' , ()=>{
     document.getElementById('transactionModal').close()
 })
 
+//Evento ao botão do Sidebar;
+
+const sidebarToggle = document.getElementById('sidebarToggle')
+const sidebar = document.getElementById('sidebar')
+
+sidebarToggle.addEventListener('click' , ()=>{
+    sidebar.classList.toggle('is-open')
+})
+
+//Evento Close ao botão sidebar;
+
+document.getElementById('closeSidebar').addEventListener('click', () => {
+    sidebar.classList.remove('is-open');
+});
+
 
 
 //Twemoji;

@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-    <aside>
+    <aside id="sidebar">
+        <button id="closeSidebar" aria-label="Fechar menu">«</button>
         <nav>
             <ul>
                 <li><a href="#" class="is-active" id="visaogeral"> 📊 Visão Geral</a></li>
@@ -24,6 +25,7 @@
 
     <div class="main-wrapper">
         <header>
+            <button class="sidebar-toggle" id="sidebarToggle" aria-label="Abrir/fechar menu"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-layers-icon lucide-layers"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"/><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"/><path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"/></svg></button>
             <h1>Visão Geral</h1>
             <button id="newTransaction">+ Nova Transação</button>
         </header>
@@ -68,20 +70,20 @@
                 <h2>Transações</h2>
                 <input type="search" id="searchInput" class="search-input" placeholder="Pesquisar por descrição ou categoria..." aria-label="Pesquisar transações">
 
-                <table>
-                    <thead>
-                        <tr>
-                            <th scope="col">Descrição</th>
-                            <th scope="col">Categoria</th>
-                            <th scope="col">Data</th>
-                            <th scope="col">Tipo</th>
-                            <th scope="col">Valor</th>
-                        </tr>
-                    </thead>
-                    <tbody id="transactionList">
-                        <!-- linhas de transações vão entrar aqui via JS -->
-                    </tbody>
-                </table>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th scope="col">Descrição</th>
+                                <th scope="col">Categoria</th>
+                                <th scope="col">Data</th>
+                                <th scope="col">Tipo</th>
+                                <th scope="col">Valor</th>
+                            </tr>
+                        </thead>
+                        <tbody id="transactionList">
+                            <!-- linhas de transações vão entrar aqui via JS -->
+                        </tbody>
+                    </table>
 
             </section>
     
